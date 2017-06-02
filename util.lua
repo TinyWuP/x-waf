@@ -124,8 +124,8 @@ end
 --end
 
 -- WAF log record for json
-function _M.log_record(config_log_dir, method, url, data, ruletag)
-    local log_path = config_log_dir
+function _M.log_record( method, url, data, ruletag)
+    local log_path = config.config_log_dir
     local client_IP = _M.get_client_ip()
     local user_agent = _M.get_user_agent()
     local server_name = ngx.var.server_name
